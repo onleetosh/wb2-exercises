@@ -1,3 +1,7 @@
+/*
+    Solution 1
+ */
+
 package com.pluralsight;
 
 import java.util.Scanner;
@@ -31,7 +35,7 @@ public class FullNameGenerator {
         }
 
         //display the full name
-        System.out.println("Your full name: " + fullName.toString());
+        System.out.println("Your full name: " + fullName);
 
     }
 
