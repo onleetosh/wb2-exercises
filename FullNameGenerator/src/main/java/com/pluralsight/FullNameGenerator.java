@@ -33,10 +33,6 @@ public class FullNameGenerator {
         //display the full name
         System.out.println("Your full name: " + fullName.toString());
 
-
-
-
-
     }
 
     public static String PromptForNames(String prompt){
