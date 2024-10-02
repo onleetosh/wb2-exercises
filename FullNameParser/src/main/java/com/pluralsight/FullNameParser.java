@@ -1,13 +1,11 @@
-/*
-    EXERCISE : Create a Java application called FullNameParser that prompts the user to enter a
-    name in one of the following two formats: first last or first middle last.
-    Make sure to trim the name before proceeding in case the user entered leading or
-    trailing spaces.
 
- */
+//   EXERCISE : Create a Java application called FullNameParser that prompts the user to enter a
+//   name in one of the following two formats: first last or first middle last. Make sure to
+//   trim the name before proceeding in case the user entered leading or trailing spaces.
+//   TIP: Use "\\s" is to split a string by space
+
 
 package com.pluralsight;
-
 import java.util.Scanner;
 
 public class FullNameParser {
@@ -16,44 +14,42 @@ public class FullNameParser {
 
     public static void main(String[] args) {
 
-        //prompt user for parts of their name
-        String fullName = PromptForNames("Please enter your name");
+        //prompt user for their name
+        String fullName = PromptForName("Please enter your name ");
 
-        String firstName = getName.toString().split(0);
-        String middleName = getName.toString();
-        String lastName = getName.toString();
+        //split name into each individual String
+        String[] partOfName = fullName.split("\\s");
 
+        //if the user only enters a first and last name.
+        if(partOfName.length == 2) {
+            String firstName = partOfName[0];
+            String lastName = partOfName[1];
 
-
-
-        //TODO: Parse the name and process it so that you can display the individual pieces of the name
-        String[] partsOfName = fullName.split();
-
-   /*
-        //TODO: if the user does not have a middle name or suffix
-        if(!middleName.isEmpty()){
-            fullName.append(" ").append(middleName);
+            //display individual names
+            System.out.println();
+            System.out.println("You entered a first and last name. \nYour name displayed in individual pieces");
+            System.out.println("\tFirst: " + firstName);
+            System.out.println("\tLast: " + lastName);
         }
-        fullName.append(" ").append(lastName);
 
-        if(!suffix.isEmpty()){
-            fullName.append(", ").append(suffix);
-        } */
+        //if the user enters a first, middle and last name
+        else if(partOfName.length == 3) {
+            String firstName = partOfName[0];
+            String middleName = partOfName[1];
+            String lastName = partOfName[2];
 
-        //display the parts of name
-        System.out.println("First name: " + firstName);
-        System.out.println("Middle name: " + middleName);
-        System.out.println("Last name: " + lastName);
-
-
-
-
+            //display individual names
+            System.out.println();
+            System.out.println("You entered a first, middle, and last name. \nYour name displayed in individual pieces");
+            System.out.println("\tFirst: " + firstName);
+            System.out.println("\tMiddle: " + middleName);
+            System.out.println("\tLast: " + lastName);
+        }
     }
 
-    public static String PromptForNames(String prompt){
+    public static String PromptForName(String prompt){
         System.out.print(prompt);
         String name = s.nextLine().trim();
         return name;
-
     }
 }
