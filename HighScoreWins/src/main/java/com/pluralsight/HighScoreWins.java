@@ -6,7 +6,6 @@
 //Based on the user input, you should determine which team had the higher score
 //and display the name of the winning team.
 
-
 package com.pluralsight;
 
 import java.util.Scanner;
