@@ -40,7 +40,7 @@ public class AddressBuilder {
         String shippingStreet = PromptUser("Street: ");
         String shippingCity = PromptUser("City: ");;
         String shippingState = PromptUser("State: ");;
-        String shippingZip= PromptUser("Zip Code: ");;
+        String shippingZip = PromptUser("Zip Code: ");;
 
         // Appending Billing details to StringBuilder
         StringBuilder billingInfo = new StringBuilder("\n\nBilling Address:");
