@@ -16,16 +16,44 @@ public class TheaterReservation {
 
     public static void main(String[] arg) {
 
+        System.out.println("Start movie reservation");
+
         //prompt user for information
-        String name = Prompt("Please enter your name ");
-        String movieDate = Prompt("What date will you be coming (MM/dd/yyyy): ");
-        String numberOfTickets = Prompt("How many tickets would you like: ");
+        String fullName = PromptForInput("\tPlease enter your name: ");
+        String movieDate = PromptForInput("\tWhat date will you be coming (MM/dd/yyyy): ");
+        String numberOfTickets = PromptForInput("\tHow many tickets would you like? ");
+
+        //declare an array parts of name and split full where there is a space (" ")
+        String[] partOfName = fullName.split( " ");
+        String firstName = partOfName[0];  //set firstname equal to first element in the array
+        String lastName = partOfName[1];  //set last name equal to second element in the array
+
+        //convert the number entered as a String to an integer
+        int ticket = Integer.parseInt(numberOfTickets);
+
+        //build a string with set variables
+        StringBuilder confirmation = new StringBuilder();
+
+        //If user enters 1 ticket
+        if (ticket == 1) {
+            confirmation.append(numberOfTickets + " ticket reserved for ");
+            confirmation.append(movieDate + " under ");
+            confirmation.append(lastName + ", " + firstName);
+        }
+
+        //If the user enters more than 1 ticket
+        else {
+            confirmation.append(numberOfTickets + " tickets reserved for ");
+            confirmation.append(movieDate + " under ");
+            confirmation.append(lastName + ", " + firstName);
+        }
 
         //display confirmation
+        System.out.println("\nConfirmation: " + confirmation);
 
     }
 
-    public static String Prompt(String prompt) {
+    public static String PromptForInput(String prompt) {
         System.out.print(prompt);
         String userInput = input.nextLine().trim();
         return userInput;
