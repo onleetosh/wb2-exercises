@@ -8,8 +8,26 @@
 
 package com.pluralsight;
 
+import java.util.Scanner;
+
 public class TheaterReservation {
 
+    static Scanner input = new Scanner(System.in);
 
+    public static void main(String[] arg) {
 
+        //prompt user for information
+        String name = Prompt("Please enter your name ");
+        String movieDate = Prompt("What date will you be coming (MM/dd/yyyy): ");
+        String numberOfTickets = Prompt("How many tickets would you like: ");
+
+        //display confirmation
+
+    }
+
+    public static String Prompt(String prompt) {
+        System.out.print(prompt);
+        String userInput = input.nextLine().trim();
+        return userInput;
+    }
 }

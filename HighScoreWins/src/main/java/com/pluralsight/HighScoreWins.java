@@ -20,14 +20,14 @@ public class HighScoreWins {
 
         //Declare an array to separate the two parts of data (Team and Score)
         String[] data = gameInformation.split("\\|");  // .split(separate string on "|")
-        String teamNamePart = data[0];  //
+        String teamNamePart = data[0];
         String teamScorePart = data[1];
 
-        //declare an array to hold  names and score
+        //declare an array to hold names and score
         String[] teamName = teamNamePart.split(":");
         String[] teamScore = teamScorePart.split(":"); // .split(separate string on ":")
 
-        //assigning variables by reference to elements in the array
+        //assigning variables by referring to elements in the array
         String homeTeam = teamName[0];
         String awayTeam = teamName[1];
 
@@ -35,6 +35,7 @@ public class HighScoreWins {
         int homeScore = Integer.parseInt(teamScore[0]);
         int awayScore = Integer.parseInt(teamScore[1]);
 
+        //determine the winner
         if (homeScore > awayScore) {
             System.out.println("WINNER! " + homeTeam);
         }
@@ -46,6 +47,7 @@ public class HighScoreWins {
         }
     }
 
+    //method used to prompt for user input
     public static String Prompt(String prompt){
         System.out.println(prompt + "(ex. Nets:Bulls | 95:102 )");
         String userInput = input.nextLine().trim();
