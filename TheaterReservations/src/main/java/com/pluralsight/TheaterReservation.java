@@ -16,17 +16,17 @@ public class TheaterReservation {
 
     public static void main(String[] arg) {
 
-        System.out.println("Start movie reservation");
+        System.out.println("\nStart movie reservation");
 
         //prompt user for information
-        String fullName = PromptForInput("\tPlease enter your name: ");
+        String fullName = PromptForInput("\n\tPlease enter first and last name: ");
         String movieDate = PromptForInput("\tWhat date will you be coming (MM/dd/yyyy): ");
         String numberOfTickets = PromptForInput("\tHow many tickets would you like? ");
 
         //declare an array parts of name and split full where there is a space (" ")
-        String[] partOfName = fullName.split( " ");
-        String firstName = partOfName[0];  //set firstname equal to first element in the array
-        String lastName = partOfName[1];  //set last name equal to second element in the array
+        String[] partsOfName = fullName.split(" ");
+        String firstName = partsOfName[0];  //set firstname equal to first element in the array
+        String lastName = partsOfName[1];  //set last name equal to second element in the array
 
         //convert the number entered as a String to an integer
         int ticket = Integer.parseInt(numberOfTickets);
