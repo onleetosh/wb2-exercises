@@ -9,8 +9,7 @@ public class ForLoop {
         for (int t = 10; t > 0; t--){
             System.out.println(t);
         }
-        System.out.println("LAUNCH!");
-
+        System.out.println("BLAST OFF!");
     }
 
 }

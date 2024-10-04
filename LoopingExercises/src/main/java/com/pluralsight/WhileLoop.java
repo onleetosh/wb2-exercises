@@ -8,6 +8,6 @@ public class WhileLoop {
       while( x < 5 ) {
             System.out.println("\"I love Java !\"");
             x++;
-        }cd
+        }
     }
 }
