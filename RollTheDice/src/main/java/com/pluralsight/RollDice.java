@@ -3,7 +3,7 @@ package com.pluralsight;
 public class RollDice {
 
     public static void main(String[] args) {
-        
+
         Dice dice1, dice2;
         int result;
 
@@ -19,13 +19,14 @@ public class RollDice {
         int countSeven = 0;
 
 
-        for (int i=1;i<21; i++) {
+        //loop to perform 100 dice rolls
+        for (int i=1;i<101; i++) {
 
             result = dice1.roll() + dice2.roll();
 
             System.out.println("Roll " + i + ": " + dice1.roll() + " + " + dice2.roll() + " = " + result);
 
-            //track the number of time 2, 4, 6, and 7, were rolled
+            //track the number of times dice roll equaled 2, 4, 6, or 7
             switch (result) {
                 case 2:
                     countTwo++;
