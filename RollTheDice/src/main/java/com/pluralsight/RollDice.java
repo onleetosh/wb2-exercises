@@ -20,7 +20,7 @@ public class RollDice {
 
 
         //loop to perform 100 dice rolls
-        for (int i=1;i<101; i++) {
+        for (int i = 1; i < 101; i++) {
 
             result = dice1.roll() + dice2.roll();
 
