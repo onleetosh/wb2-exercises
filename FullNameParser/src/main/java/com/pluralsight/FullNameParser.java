@@ -44,7 +44,7 @@ public class FullNameParser {
         }
         else {
             String name = partOfName[0];
-            System.out.println("\nSorry " + name + ", \nYou failed to enter a full name \nGoodbye!");
+            System.out.println("\nSorry " + name + ", \nYou failed to enter a full name \n\tGoodbye!");
         }
     }
 

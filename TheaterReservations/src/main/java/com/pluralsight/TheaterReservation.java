@@ -16,12 +16,12 @@ public class TheaterReservation {
 
     public static void main(String[] arg) {
 
-        System.out.println("\nStart movie reservation");
+        System.out.println("\nStarting Movie Reservation");
 
         //prompt user for information
-        String fullName = PromptForInput("\n\tPlease enter first and last name: ");
-        String movieDate = PromptForInput("\tWhat date will you be coming (MM/dd/yyyy): ");
-        String numberOfTickets = PromptForInput("\tHow many tickets would you like? ");
+        String fullName = PromptForInput("\nPlease enter first and last name: ");
+        String movieDate = PromptForInput("What date will you be coming (MM/dd/yyyy): ");
+        String numberOfTickets = PromptForInput("How many tickets would you like? ");
 
         //declare an array parts of name and split full where there is a space (" ")
         String[] partsOfName = fullName.split(" ");
@@ -34,6 +34,9 @@ public class TheaterReservation {
         //build a string with set variables
         StringBuilder confirmation = new StringBuilder();
 
+        if (ticket == 0){
+            System.out.println("\nYou reserved 0 tickets. Have a good day.");
+        }
         //If user enters 1 ticket
         if (ticket == 1) {
             confirmation.append(numberOfTickets + " ticket reserved for ");
