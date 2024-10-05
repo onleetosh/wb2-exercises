@@ -11,7 +11,7 @@ public class Dice {
         return faceValue;
     }
 
-    //roll the die and return a random integer
+    //roll the die and return a possible value
     public int roll(){
         faceValue = (int)(Math.random() * maxFaceValueOfDie) + 1;
         return  faceValue;
