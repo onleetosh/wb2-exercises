@@ -17,7 +17,7 @@ public class FullNameParser {
         //prompt user for their name
         String fullName = PromptForName("Please enter your name ");
 
-        //declare an array with elements using Full Name and split at between the "\\s" space of string
+        //declare an array with elements using Full Name and split between the "\\s" space of string
         String[] partOfName = fullName.split("\\s");
 
         //if the user only enters a first and last name.
