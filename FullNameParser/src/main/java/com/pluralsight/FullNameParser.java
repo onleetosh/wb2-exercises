@@ -28,8 +28,8 @@ public class FullNameParser {
             //display individual names
             System.out.println();
             System.out.println("You entered a first and last name \nHere is your name displayed in parts");
-            System.out.println("\tFirst: " + firstName);
-            System.out.println("\tLast:" + lastName);
+            System.out.println("\tFirst: " + firstName + "\n\tLast: " + lastName);
+
         }
 
         //if the user enters a first, middle and last name
@@ -41,9 +41,8 @@ public class FullNameParser {
             //display individual names
             System.out.println();
             System.out.println("You entered a first, middle, and last name \nHere is your name displayed in parts");
-            System.out.println("\tFirst: " + firstName);
-            System.out.println("\tMiddle: " + middleName);
-            System.out.println("\tLast: " + lastName);
+            System.out.println("\tFirst: " + firstName + "\n\tMiddle: " + middleName + "\n\tLast: " + lastName);
+
         }
         else {
             String name = partOfName[0];
