@@ -26,8 +26,7 @@ public class FullNameParser {
             String lastName = partOfName[1];
 
             //display individual names
-            System.out.println();
-            System.out.println("You entered a first and last name \nHere is your name displayed in parts");
+            System.out.println("\nYou entered a first and last name \nHere is your name displayed in parts");
             System.out.println("\tFirst: " + firstName + "\n\tLast: " + lastName);
 
         }
@@ -39,14 +38,13 @@ public class FullNameParser {
             String lastName = partOfName[2];
 
             //display individual names
-            System.out.println();
-            System.out.println("You entered a first, middle, and last name \nHere is your name displayed in parts");
+            System.out.println("\nYou entered a first, middle, and last name \nHere is your name displayed in parts");
             System.out.println("\tFirst: " + firstName + "\n\tMiddle: " + middleName + "\n\tLast: " + lastName);
 
         }
         else {
             String name = partOfName[0];
-            System.out.println("Sorry " + name + ", \nYou failed to enter a full name \nGoodbye!");
+            System.out.println("\nSorry " + name + ", \nYou failed to enter a full name \nGoodbye!");
         }
     }
 
