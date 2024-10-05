@@ -15,7 +15,7 @@ public class FullNameParser {
     public static void main(String[] args) {
 
         //prompt user for their name
-        String fullName = PromptForName("Please enter your name ");
+        String fullName = PromptForName("Please enter your full name ");
 
         //declare an array with elements using Full Name and split between the "\\s" space of string
         String[] partOfName = fullName.split("\\s");
@@ -44,6 +44,10 @@ public class FullNameParser {
             System.out.println("\tFirst: " + firstName);
             System.out.println("\tMiddle: " + middleName);
             System.out.println("\tLast: " + lastName);
+        }
+        else {
+            String firstName = partOfName[0];
+            System.out.println("Sorry " + firstName + ", \nYou failed to enter a full name.\nGoodbye!");
         }
     }
 
