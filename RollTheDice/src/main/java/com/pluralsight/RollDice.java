@@ -19,12 +19,13 @@ public class RollDice {
         int countSix = 0;
         int countSeven = 0;
 
-        //loop to perform 100 dice rolls
-        for (int i = 1; i < 101; i++) {
+        System.out.println("\n----Starting Dice Rolls----");
+        //loop to perform 100 dice rolls. countdown from 100 to 1
+        for (int i = 100; i > 0; i--) {
 
             int sumOfDice = die1.roll() + die2.roll();
 
-            System.out.println("Roll #" + i + ": " + die1.roll() + " + " + die2.roll() + " = " + sumOfDice);
+            System.out.println("Roll #" + i + ":  " + die1.roll() + "  -  " + die2.roll() + "   Sum:  " + sumOfDice);
 
             //increment the number of times dice roll equaled 2, 4, 6, or 7
             switch (sumOfDice) {
