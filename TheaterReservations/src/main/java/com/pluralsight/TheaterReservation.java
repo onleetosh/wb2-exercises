@@ -23,7 +23,7 @@ public class TheaterReservation {
         String movieDate = PromptForInput("What date will you be coming (MM/dd/yyyy): ");
         String numberOfTickets = PromptForInput("How many tickets would you like? ");
 
-        //declare an array parts of name and split full where there is a space (" ")
+        //declare an array for parts of name and split where at the " " space
         String[] partsOfName = fullName.split(" ");
         String firstName = partsOfName[0];  //set firstname equal to first element in the array
         String lastName = partsOfName[1];  //set last name equal to second element in the array
@@ -34,6 +34,7 @@ public class TheaterReservation {
         //build a string with set variables
         StringBuilder confirmation = new StringBuilder();
 
+        //if the user enters 0 tickets
         if (ticket == 0){
             System.out.println("\nYou reserved 0 tickets. Have a good day.");
         }
@@ -53,7 +54,6 @@ public class TheaterReservation {
 
         //display confirmation
         System.out.println("\nConfirmation: " + confirmation);
-
     }
 
     public static String PromptForInput(String prompt) {
