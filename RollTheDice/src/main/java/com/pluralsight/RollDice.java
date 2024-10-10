@@ -25,8 +25,9 @@ public class RollDice {
 
             int sumOfDice = die1.roll() + die2.roll();
 
-            System.out.println("Roll #" + i + ":  " + die1.roll() + "  -  " + die2.roll() + "   Sum:  " + sumOfDice);
+            //System.out.println("Roll #" + i + ":  " + die1.roll() + "  -  " + die2.roll() + "   Sum:  " + sumOfDice);
 
+            System.out.printf("Roll # :%5s  %2s -%2s   Sum : %s \n", i, die1.roll(), die2.roll(), sumOfDice );
             //increment the number of times dice roll equaled 2, 4, 6, or 7
             switch (sumOfDice) {
                 case 2:
